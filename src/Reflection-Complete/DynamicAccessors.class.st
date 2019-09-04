@@ -27,8 +27,3 @@ DynamicAccessors >> doesNotUnderstand: aMessage [
 			^ aMessage sendTo: self].
 	super doesNotUnderstand: aMessage
 ]
-
-{ #category : #'as yet unclassified' }
-DynamicAccessors >> x [
- ^ x
-]

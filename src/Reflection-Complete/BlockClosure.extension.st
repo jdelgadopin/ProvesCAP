@@ -1,12 +1,13 @@
 Extension { #name : #BlockClosure }
 
 { #category : #'*Reflection-Complete' }
-BlockClosure >> mentreCert: aBlock [
+BlockClosure >> whileTrueCC: aBlock [
 	"versió de whileTrue: implementada amb callcc:"
+
 	| cont |
-	cont := Continuation callcc: [ :cc | cc ].			
-	self value 	ifTrue: [ 	aBlock value. 
-						      	cont value: cont]
-		 	    		ifFalse: [^ nil].
-	
+	cont := Continuation callcc: [ :cc | cc ].
+	self value
+		ifTrue: [ aBlock value.
+			       cont value: cont ]
+		ifFalse: [ ^ nil ] 
 ]

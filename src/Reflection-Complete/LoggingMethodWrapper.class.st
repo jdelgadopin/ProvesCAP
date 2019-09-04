@@ -63,7 +63,7 @@ LoggingMethodWrapper >> initializeOn: aCompiledMethod [
 { #category : #running }
 LoggingMethodWrapper >> install [
 	reference actualClass methodDictionary
-		at: reference methodSymbol
+		at: reference selector
 		put: self
 ]
 
@@ -114,6 +114,6 @@ LoggingMethodWrapper >> selector: aSymbol [
 { #category : #running }
 LoggingMethodWrapper >> uninstall [
 	reference actualClass methodDictionary
-		at: reference methodSymbol
+		at: reference selector
 		put: method 
 ]
