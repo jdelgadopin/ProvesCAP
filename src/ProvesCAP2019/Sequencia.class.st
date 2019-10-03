@@ -26,6 +26,11 @@ Sequencia >> benFormada: aSeq [
 	^ true 
 ]
 
+{ #category : #initialization }
+Sequencia >> initialize [
+	"rien de rien"
+]
+
 { #category : #accessing }
 Sequencia >> seq [
 	^ seq
