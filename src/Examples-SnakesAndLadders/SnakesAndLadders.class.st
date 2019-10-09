@@ -190,7 +190,6 @@ SnakesAndLadders >> players [
 { #category : #printing }
 SnakesAndLadders >> printOn: aStream [
 	squares do: [:each | each printOn: aStream].
-	
 ]
 
 { #category : #'initialize-release' }
