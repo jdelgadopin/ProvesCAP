@@ -15,8 +15,9 @@ HaltDemo >> bar [
 	^ (self foo), 'bar'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #mock }
 HaltDemo >> foo [
+	"bla"
 	self haltIf: #bar.
 	^ 'foo'
 ]
