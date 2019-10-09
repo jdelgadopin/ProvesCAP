@@ -9,11 +9,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 ProvaClosures class >> provaClosures [
-	| comptador resetComptador incComptador valorComptador |
-	comptador := 0.
-	resetComptador := [ comptador := 0. comptador ].
-	incComptador := [ :i | comptador := comptador + i. comptador ].
-	valorComptador := [ comptador ].
-	^ { resetComptador . incComptador . valorComptador }.
+	| comptador |
+	^ { [ comptador := 0. comptador ] . [ :i | comptador := comptador + i. comptador ] . [ comptador ] }.
 	
 ]
