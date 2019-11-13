@@ -1,6 +1,6 @@
 Extension { #name : #Continuation }
 
-{ #category : #'*Reflection-Complete' }
+{ #category : #'*Coroutines-CAP2019-20' }
 Continuation class >> callcc: aBlock [
-	^ self currentDo: aBlock
+	^ self currentDo: aBlock 
 ]
