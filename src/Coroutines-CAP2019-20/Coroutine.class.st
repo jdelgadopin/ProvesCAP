@@ -23,19 +23,19 @@ Coroutine class >> example1 [
 	| a b c |
 	a := Coroutine maker: [ :resume :value |
 				'This is A' traceCr.
-				'Came from ', (resume value: b value: 'A') traceCr.. 
+				('Came from ', (resume value: b value: 'A')) traceCr.. 
 				'Back in A' traceCr.
-				'Came from ', (resume value: c value: 'A') traceCr ].
+				('Came from ', (resume value: c value: 'A')) traceCr ].
 	b := Coroutine maker: [ :resume :value |
-				'This is B' traceCr.
-				'Came from ', (resume value: c value: 'B') traceCr.. 
-				'Back in B' traceCr.
-				'Came from ', (resume value: a value: 'B') traceCr ].
+				'   This is B' traceCr.
+				('   Came from ', (resume value: c value: 'B')) traceCr.. 
+				'   Back in B' traceCr.
+				('   Came from ', (resume value: a value: 'B')) traceCr ].
 	c := Coroutine maker: [ :resume :value |
-				'This is C' traceCr.
-				'Came from ', (resume value: a value: 'C') traceCr.. 
-				'Back in C' traceCr.
-				'Came from ', (resume value: b value: 'C') traceCr ].
+				'      This is C' traceCr.
+				('      Came from ', (resume value: a value: 'C')) traceCr.. 
+				'      Back in C' traceCr.
+				('      Came from ', (resume value: b value: 'C')) traceCr ].
 	a value: '*'.
 
 ]
